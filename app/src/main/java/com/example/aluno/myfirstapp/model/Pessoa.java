@@ -17,6 +17,25 @@ public class Pessoa {
     public Pessoa() {
     }
 
+    public double imc(){
+        return peso/Math.pow(altura, 2);
+    }
+
+    public String faixa(){
+        double imc = imc();
+        if(imc<=18){
+            return "Magro";
+        }else if(imc <=25){
+            return "Normal";
+        }else if(imc <= 30){
+            return "Obeso grau I";
+        }else if(imc <= 38){
+            return "Obeso grau II";
+        }else{
+            return "Obeso grau III";
+        }
+    }
+
     public String getNome() {
         return nome;
     }
