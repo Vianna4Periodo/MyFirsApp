@@ -20,18 +20,25 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         binding();
+        btn.
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Pessoa p = new Pessoa();
+                p.setNome(nome.getText().toString());
+                p.setAltura(Double.parseDouble(altura.getText().toString()));
+                p.setPeso(Double.parseDouble(peso.getText().toString()));
 
-        Pessoa p = new Pessoa();
-        p.setNome(nome.getText().toString());
-        p.setAltura(Double.parseDouble(altura.getText().toString()));
-        p.setPeso(Double.parseDouble(peso.getText().toString()));
+                Toast.makeText(getApplicationContext(), "IMC: "+p.imc(), Toast.LENGTH_LONG).show();
+            }
+        });
 
-        double imc = p.imc();
 
-        
 
         //btn.setVisibility(View.INVISIBLE);
     }
+
+
 
     private void binding() {
         btn = findViewById(R.id.btnCalcular);
