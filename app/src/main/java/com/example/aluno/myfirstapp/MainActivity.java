@@ -74,8 +74,8 @@ public class MainActivity extends Activity {
         p.setAltura(Double.parseDouble(altura.getText().toString()));
         p.setPeso(Double.parseDouble(peso.getText().toString()));
 
-        Toast.makeText(getApplicationContext(), "IMC: " + p.imc(), Toast.LENGTH_LONG).show();
-
+        Toast.makeText(getApplicationContext(), "O IMC do " + p.getNome() + " é: " + p.imc(), Toast.LENGTH_LONG).show();
+        
         nome.setText("");
         altura.setText("0");
         peso.setText("0");
